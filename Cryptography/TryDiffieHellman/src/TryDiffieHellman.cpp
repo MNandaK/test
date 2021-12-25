@@ -3,6 +3,7 @@
 // Author      : Nandax
 // Version     : 1.0 - Successfully implement Shared Secret Key (SSK) and
 //                      keep same type for some variables
+// Date        : December 26, 2021
 // Copyright   : This is trial code, fell free to use with reference
 // Description : Try to implement basic simple shared key exchange DH algorithm
 //============================================================================
@@ -206,9 +207,9 @@ int main()
 
 	//Calculate public keys
 	dh.calcPublicKeys();
-
 	cout << "\nPublic key A = " << dh.getPublicKeyA() << "\nPublic key B = " << dh.getPublicKeyB() << "\n";
 
+	//Calculate SSK
 	dh.calcSharedSecretKey();
 	cout << "\nThe shared secret key = " << dh.getSsk() << "\n\n";
 
