@@ -1,0 +1,68 @@
+//============================================================================
+// Name        : TryDiffieHellman.cpp
+// Author      : Nandax
+// Version     : 0.0
+// Copyright   : This is trial code, fell free to use with reference
+// Description : Try to implement basic simple shared key exchange DH algorithm
+//============================================================================
+
+#define DEBUG
+
+#include <iostream>
+//#include <cmath>
+//using namespace std;
+using std::cout;
+using std::cin;
+
+class Util
+{
+	public:
+		// This method calculate power / exponent for integer,
+		// negative parameters will not working
+		unsigned int pow_positive_int(unsigned int base, unsigned int exponent)
+		{
+			unsigned int result = 1;
+
+			if(exponent != 0)
+				result = base;
+
+			for(unsigned int exp = 2; exp <= exponent; exp++)
+				result = result * base;
+
+			return result;
+		}
+};
+
+int main()
+{
+	Util util;
+
+	unsigned int primitiveRootPair[] = {2, 19};
+	unsigned int secKeyA, secKeyB;
+	unsigned int pubKeyA, pubKeyB;
+
+	//cout << "Assalamu'alaikum" << endl; // prints Assalamu'alaikum
+	cout << "\n===========================================\n";
+	cout << "\n  Try Diffie-Hellman Shared Key Algorithm  \n";
+	cout << "\n===========================================\n\n";
+
+	cout << "Please input A secret key: ";
+	cin >> secKeyA;
+	cout << "Please input B secret key: ";
+	cin >> secKeyB;
+
+	cout << "The primitive root used is '" << primitiveRootPair[0] << "' for modulo '"
+			<< primitiveRootPair[1] << "'\n";
+
+	//pubKeyA = pow(primitiveRootPair[0], secKeyA) % primitiveRootPair[1];
+	pubKeyA = util.pow_positive_int(primitiveRootPair[0], secKeyA) % primitiveRootPair[1];
+	pubKeyB = util.pow_positive_int(primitiveRootPair[0], secKeyB) % primitiveRootPair[1];
+
+	cout << "\nPublic key A = " << pubKeyA << "\nPublic key B = " << pubKeyB << "\n";
+
+#ifdef DEBUG
+	cout << "\nTry: 2^20 = " << util.pow_positive_int(2, 20);
+	cout << "\nSecret key A = " << secKeyA << "\nSecret key B = " << secKeyB << "\n";
+#endif
+	return 0;
+}

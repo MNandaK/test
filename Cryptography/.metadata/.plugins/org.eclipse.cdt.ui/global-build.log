@@ -1,0 +1,872 @@
+13:31:21 **** Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:32:32 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:35:06 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:46:08 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:15:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   15 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:53:52 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:16:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   16 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:58:21 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:16:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   16 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:58:57 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:16:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   16 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+13:59:30 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:16:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   16 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+14:00:57 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:31:2: error: invalid preprocessing directive #IFDEF
+   31 | #IFDEF DEBUG
+      |  ^~~~~
+../src/TryDiffieHellman.cpp:33:2: error: invalid preprocessing directive #ENDIF
+   33 | #ENDIF
+      |  ^~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:18:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   18 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:03:57 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:18:6: warning: unused variable ‘primitiveRootPair’ [-Wunused-variable]
+   18 |  int primitiveRootPair[] = {2, 19};
+      |      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+14:09:12 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+14:09:40 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+14:18:04 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:36:47: error: invalid operands of types ‘double’ and ‘int’ to binary ‘operator%’
+   36 |  pubKeyA = pow(primitiveRootPair[0], secKeyA) % primitiveRootPair[1];
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~
+      |               |                                                    |
+      |               double                                               int
+../src/TryDiffieHellman.cpp:21:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   21 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:52:04 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:34:2: error: expected ‘;’ after class definition
+   34 | }
+      |  ^
+      |  ;
+../src/TryDiffieHellman.cpp: In member function ‘int Util::pow_positive_int(int, int)’:
+../src/TryDiffieHellman.cpp:29:27: error: expected ‘;’ before ‘}’ token
+   29 |     result = result * base
+      |                           ^
+      |                           ;
+   30 |    }
+      |    ~                       
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:62:29: error: ‘util’ is not a class, namespace, or enumeration
+   62 |  cout << "\nTry: 2^4 = " << util::pow_positive_int(2, 4);
+      |                             ^~~~
+../src/TryDiffieHellman.cpp:38:7: warning: unused variable ‘util’ [-Wunused-variable]
+   38 |  Util util;
+      |       ^~~~
+../src/TryDiffieHellman.cpp:42:6: warning: unused variable ‘pubKeyA’ [-Wunused-variable]
+   42 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:42:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   42 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:53:32 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:34:2: error: expected ‘;’ after class definition
+   34 | }
+      |  ^
+      |  ;
+../src/TryDiffieHellman.cpp: In member function ‘int Util::pow_positive_int(int, int)’:
+../src/TryDiffieHellman.cpp:29:27: error: expected ‘;’ before ‘}’ token
+   29 |     result = result * base
+      |                           ^
+      |                           ;
+   30 |    }
+      |    ~                       
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:42:6: warning: unused variable ‘pubKeyA’ [-Wunused-variable]
+   42 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:42:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   42 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:53:51 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:34:2: error: expected ‘;’ after class definition
+   34 | }
+      |  ^
+      |  ;
+../src/TryDiffieHellman.cpp: In member function ‘int Util::pow_positive_int(int, int)’:
+../src/TryDiffieHellman.cpp:29:27: error: expected ‘;’ before ‘}’ token
+   29 |     result = result * base
+      |                           ^
+      |                           ;
+   30 |    }
+      |    ~                       
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:42:6: warning: unused variable ‘pubKeyA’ [-Wunused-variable]
+   42 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:42:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   42 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:55:01 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:32:2: error: expected ‘;’ after class definition
+   32 | }
+      |  ^
+      |  ;
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:40:6: warning: unused variable ‘pubKeyA’ [-Wunused-variable]
+   40 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:40:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   40 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:55:47 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:40:6: warning: unused variable ‘pubKeyA’ [-Wunused-variable]
+   40 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:40:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   40 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+14:56:31 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:40:6: warning: unused variable ‘pubKeyA’ [-Wunused-variable]
+   40 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:40:15: warning: unused variable ‘pubKeyB’ [-Wunused-variable]
+   40 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+15:06:08 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:41:6: warning: variable ‘pubKeyA’ set but not used [-Wunused-but-set-variable]
+   41 |  int pubKeyA, pubKeyB;
+      |      ^~~~~~~
+../src/TryDiffieHellman.cpp:41:15: warning: variable ‘pubKeyB’ set but not used [-Wunused-but-set-variable]
+   41 |  int pubKeyA, pubKeyB;
+      |               ^~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+15:07:37 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+15:17:10 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In member function ‘unsigned int Util::pow_positive_int(unsigned int, unsigned int)’:
+../src/TryDiffieHellman.cpp:29:25: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   29 |    for(int exp = 2; exp <= exponent; exp++)
+      |                     ~~~~^~~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+15:17:38 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+15:20:19 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+16:43:55 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+16:53:26 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:89:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   89 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+17:01:33 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:92:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   92 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+17:05:44 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:102:27: warning: integer constant is so large that it is unsigned
+  102 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:92:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   92 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+17:10:14 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:102:27: warning: integer constant is so large that it is unsigned
+  102 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:111:31: warning: integer constant is too large for its type
+  111 |  unsigned __int128 try128_1 = 340282366920938463463374607431768211455;
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:112:31: warning: integer constant is too large for its type
+  112 |  unsigned __int128 try128_2 = 340282366920938463463374607431768211456;
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:92:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   92 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+../src/TryDiffieHellman.cpp:114:30: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘__int128 unsigned’)
+  114 |  cout << "\nInt try128_1 = " << try128_1 << "\nInt try128_1 = " << try128_2 << "\n";
+      |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~
+      |       |                         |
+      |       std::basic_ostream<char>  __int128 unsigned
+In file included from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:511:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char; _Traits = std::char_traits<char>]’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:517:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:523:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:528:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:12:24 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:102:27: warning: integer constant is so large that it is unsigned
+  102 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:92:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   92 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+../src/TryDiffieHellman.cpp:111:20: warning: unused variable ‘try128_1’ [-Wunused-variable]
+  111 |  unsigned __int128 try128_1 = -1;
+      |                    ^~~~~~~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+17:13:38 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:102:27: warning: integer constant is so large that it is unsigned
+  102 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:92:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   92 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:105:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  105 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+../src/TryDiffieHellman.cpp:115:30: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘__int128 unsigned’)
+  115 |  cout << "\nInt try128_1 = " << try128_1 << "\n";
+      |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~
+      |       |                         |
+      |       std::basic_ostream<char>  __int128 unsigned
+In file included from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:511:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char; _Traits = std::char_traits<char>]’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:517:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:523:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:528:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:22:30 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:103:27: warning: integer constant is so large that it is unsigned
+  103 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:106:27: warning: integer constant is so large that it is unsigned
+  106 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:93:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   93 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:106:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  106 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+../src/TryDiffieHellman.cpp:116:33: error: ‘to_string’ was not declared in this scope; did you mean ‘std::__cxx11::to_string’?
+  116 |  cout << "\nInt try128_1 = " << to_string(try128_1) << "\n";
+      |                                 ^~~~~~~~~
+      |                                 std::__cxx11::to_string
+In file included from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/bits/basic_string.h:6598:3: note: ‘std::__cxx11::to_string’ declared here
+ 6598 |   to_string(long double __val)
+      |   ^~~~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:24:40 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:108:27: warning: integer constant is so large that it is unsigned
+  108 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:95:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   95 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:108:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  108 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+../src/TryDiffieHellman.cpp:118:51: error: call of overloaded ‘to_string(__int128 unsigned&)’ is ambiguous
+  118 |  cout << "\nInt try128_1 = " << to_string(try128_1) << "\n";
+      |                                                   ^
+In file included from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
+                 from ../src/TryDiffieHellman.cpp:11:
+/usr/include/c++/9/bits/basic_string.h:6598:3: note: candidate: ‘std::string std::__cxx11::to_string(long double)’
+ 6598 |   to_string(long double __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6589:3: note: candidate: ‘std::string std::__cxx11::to_string(double)’
+ 6589 |   to_string(double __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6580:3: note: candidate: ‘std::string std::__cxx11::to_string(float)’
+ 6580 |   to_string(float __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6574:3: note: candidate: ‘std::string std::__cxx11::to_string(long long unsigned int)’
+ 6574 |   to_string(unsigned long long __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6568:3: note: candidate: ‘std::string std::__cxx11::to_string(long long int)’
+ 6568 |   to_string(long long __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6562:3: note: candidate: ‘std::string std::__cxx11::to_string(long unsigned int)’
+ 6562 |   to_string(unsigned long __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6557:3: note: candidate: ‘std::string std::__cxx11::to_string(long int)’
+ 6557 |   to_string(long __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6551:3: note: candidate: ‘std::string std::__cxx11::to_string(unsigned int)’
+ 6551 |   to_string(unsigned __val)
+      |   ^~~~~~~~~
+/usr/include/c++/9/bits/basic_string.h:6546:3: note: candidate: ‘std::string std::__cxx11::to_string(int)’
+ 6546 |   to_string(int __val)
+      |   ^~~~~~~~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:27:26 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:108:27: warning: integer constant is so large that it is unsigned
+  108 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:95:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   95 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:108:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  108 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+17:30:52 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:105:27: warning: integer constant is so large that it is unsigned
+  105 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:108:27: warning: integer constant is so large that it is unsigned
+  108 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:95:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+   95 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:108:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  108 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+18:07:41 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:118:27: warning: integer constant is so large that it is unsigned
+  118 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:121:27: warning: integer constant is so large that it is unsigned
+  121 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:95:60: error: ‘primitiveRootPair’ was not declared in this scope; did you mean ‘primitiveRoot’?
+   95 |  pubKeyA = util.pow_positive_int(primitiveRoot, secKeyA) % primitiveRootPair[1];
+      |                                                            ^~~~~~~~~~~~~~~~~
+      |                                                            primitiveRoot
+../src/TryDiffieHellman.cpp:108:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+  108 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:121:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  121 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+make: *** [src/subdir.mk:20: src/TryDiffieHellman.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:08:28 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+../src/TryDiffieHellman.cpp:118:27: warning: integer constant is so large that it is unsigned
+  118 |  unsigned long tryLong1 = 18446744073709551615;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp:121:27: warning: integer constant is so large that it is unsigned
+  121 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ^~~~~~~~~~~~~~~~~~~~
+../src/TryDiffieHellman.cpp: In function ‘int main()’:
+../src/TryDiffieHellman.cpp:108:22: warning: unsigned conversion from ‘long int’ to ‘unsigned int’ changes value from ‘4294967296’ to ‘0’ [-Woverflow]
+  108 |  unsigned int try2 = 4294967296;
+      |                      ^~~~~~~~~~
+../src/TryDiffieHellman.cpp:121:48: warning: unsigned conversion from ‘__int128’ to ‘long unsigned int’ changes value from ‘0x10000000000000000’ to ‘0’ [-Woverflow]
+  121 |  unsigned long tryLong2 = 18446744073709551615 + 1;
+      |                           ~~~~~~~~~~~~~~~~~~~~~^~~
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+18:08:57 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 

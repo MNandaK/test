@@ -1,0 +1,108 @@
+//============================================================================
+// Name        : TryDiffieHellman.cpp
+// Author      : Nandax
+// Version     : 0.0
+// Copyright   : This is trial code, fell free to use with reference
+// Description : Try to implement basic simple shared key exchange DH algorithm
+//============================================================================
+
+#define DEBUG
+
+#include <iostream>
+
+#ifdef DEBUG
+#include <climits>
+#endif
+//#include <cmath>
+//using namespace std;
+using std::cout;
+using std::cin;
+
+class Util
+{
+	public:
+		// This method calculate power / exponent for integer,
+		// negative parameters will not working
+		unsigned int pow_positive_int(unsigned int base, unsigned int exponent)
+		{
+			unsigned int result = 1;
+
+			if(exponent != 0)
+				result = base;
+
+			for(unsigned int exp = 2; exp <= exponent; exp++)
+				result = result * base;
+
+			return result;
+		}
+};
+
+int main()
+{
+	Util util;
+
+	unsigned int primitiveRootPair[] = {2, 19};
+	unsigned int secKeyA, secKeyB;
+	unsigned int pubKeyA, pubKeyB;
+
+	//cout << "Assalamu'alaikum" << endl; // prints Assalamu'alaikum
+	cout << "\n===========================================\n";
+	cout << "\n  Try Diffie-Hellman Shared Key Algorithm  \n";
+	cout << "\n===========================================\n\n";
+
+	do {
+		cout << "Please input A secret key (0-32 value): ";
+		cin >> secKeyA;
+
+		if(secKeyA < 0 || secKeyA > 32)
+			cout << "Key value is out of range, please input the correct value :)\n";
+
+		cout << "\n";
+
+	} while(secKeyA < 0 || secKeyA > 32);
+
+	do {
+		cout << "Please input B secret key (0-32 value): ";
+		cin >> secKeyB;
+
+		if(secKeyB < 0 || secKeyB > 32)
+			cout << "Key value is out of range, please input the correct value :)\n";
+
+		cout << "\n";
+
+	} while(secKeyB < 0 || secKeyB > 32);
+
+	cout << "The primitive root used is '" << primitiveRootPair[0] << "' for modulo '"
+			<< primitiveRootPair[1] << "'\n";
+
+	//pubKeyA = pow(primitiveRootPair[0], secKeyA) % primitiveRootPair[1];
+	pubKeyA = util.pow_positive_int(primitiveRootPair[0], secKeyA) % primitiveRootPair[1];
+	pubKeyB = util.pow_positive_int(primitiveRootPair[0], secKeyB) % primitiveRootPair[1];
+
+	cout << "\nPublic key A = " << pubKeyA << "\nPublic key B = " << pubKeyB << "\n";
+
+#ifdef DEBUG
+
+	cout << "\n\n======= Below values are for try and debug! ========\n\n";
+
+	cout << "\nTry: 2^20 = " << util.pow_positive_int(2, 20);
+	cout << "\nMax number in exponent = " << UINT_MAX;
+
+	unsigned int try1 = 4294967295;
+	unsigned int try2 = 4294967296;
+
+	cout << "\nInt try1 = " << try1 << "\nInt try2 = " << try2 << "\n";
+
+	unsigned int try3 = -1;
+	cout << "\nInt try3 = " << try3 << "\n";
+
+	unsigned long tryLong = -1;
+	cout << "\nInt tryLong = " << tryLong << "\n";
+
+	unsigned long long tryLongLong = -1;
+	cout << "\nInt tryLongLong = " << tryLongLong << "\n";
+
+	cout << "\nSecret key A = " << secKeyA << "\nSecret key B = " << secKeyB << "\n";
+#endif
+	return 0;
+}

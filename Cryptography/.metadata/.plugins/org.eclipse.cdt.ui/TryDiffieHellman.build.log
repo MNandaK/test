@@ -1,0 +1,15 @@
+18:08:57 **** Incremental Build of configuration Debug for project TryDiffieHellman ****
+make all 
+Building file: ../src/TryDiffieHellman.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TryDiffieHellman.d" -MT"src/TryDiffieHellman.o" -o "src/TryDiffieHellman.o" "../src/TryDiffieHellman.cpp"
+Finished building: ../src/TryDiffieHellman.cpp
+ 
+Building target: TryDiffieHellman
+Invoking: GCC C++ Linker
+g++  -o "TryDiffieHellman"  ./src/TryDiffieHellman.o   
+Finished building target: TryDiffieHellman
+ 
+
+18:08:58 Build Finished. 0 errors, 0 warnings. (took 1s.478ms)
+
