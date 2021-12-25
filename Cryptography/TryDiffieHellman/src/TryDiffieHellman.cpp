@@ -1,7 +1,8 @@
 //============================================================================
 // Name        : TryDiffieHellman.cpp
 // Author      : Nandax
-// Version     : 0.9 - Improve modulo exponential method to be more efficient
+// Version     : 1.0 - Successfully implement Shared Secret Key (SSK) and
+//                      keep same type for some variables
 // Copyright   : This is trial code, fell free to use with reference
 // Description : Try to implement basic simple shared key exchange DH algorithm
 //============================================================================
@@ -27,14 +28,14 @@ class Util
 	public:
 		// This method calculate power / exponent for integer,
 		// negative parameters will not working
-		unsigned long pow_positive_int(unsigned short base, unsigned short exponent)
+		unsigned long pow_positive_int(unsigned short base, unsigned int exponent)
 		{
 			unsigned long result = 1;
 
 			if(exponent != 0)
 				result = base;
 
-			for(unsigned short exp = 2; exp <= exponent; exp++)
+			for(unsigned int exp = 2; exp <= exponent; exp++)
 				result = result * base;
 
 			return result;
@@ -42,14 +43,14 @@ class Util
 
 		// This method calculate modulo of exponent integer,
 		// negative parameters will not working
-		unsigned short mod_exponent(unsigned short base, unsigned long exponent, unsigned short modulo)
+		unsigned short mod_exponent(unsigned short base, unsigned int exponent, unsigned short modulo)
 		{
 			unsigned short result = 1;
 
 			if(exponent > 0)
 				result = base;
 
-			for(unsigned long exp = 2; exp <= exponent; exp++)
+			for(unsigned int exp = 2; exp <= exponent; exp++)
 			{
 				//This formula is get from
 				//https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
@@ -59,12 +60,12 @@ class Util
 			return result;
 		}
 
-		// Improvement of method to calculate modulo of exponent integer,
+		// Improvement of method to calculate modulo of exponent integer for base 2,
 		// negative parameters will not working
-		unsigned short mod_exponent_v2(unsigned short base, unsigned long exponent, unsigned short modulo)
+		unsigned short mod_exponent_v2(unsigned short base, unsigned int exponent, unsigned short modulo)
 		{
 			unsigned short result = 1;
-			unsigned long exp = exponent;
+			unsigned int exp = exponent;
 
 			if(exponent >= 64)
 			{
@@ -127,6 +128,17 @@ class DiffieHellman
 			pubKeyB = util.mod_exponent_v2(primitiveRoot, secKeyB, moduloChoose[chosenModulo-1]);
 		}
 
+		void calcSharedSecretKey()
+		{
+			Util util;
+
+			unsigned int sskA = util.mod_exponent(pubKeyB, secKeyA, moduloChoose[chosenModulo-1]);
+			unsigned int sskB = util.mod_exponent(pubKeyA, secKeyB, moduloChoose[chosenModulo-1]);
+
+			if (sskA == sskB)
+				ssk = sskA;
+		}
+
 		void setSecretKeyA(istream &in)
 		{
 			in >> secKeyA;
@@ -136,22 +148,27 @@ class DiffieHellman
 			in >> secKeyB;
 		}
 
-		unsigned short getSecretKeyA()
+		unsigned int getSecretKeyA()
 		{
 			return secKeyA;
 		}
-		unsigned short getSecretKeyB()
+		unsigned int getSecretKeyB()
 		{
 			return secKeyB;
 		}
 
-		unsigned short getPublicKeyA()
+		unsigned int getPublicKeyA()
 		{
 			return pubKeyA;
 		}
-		unsigned short getPublicKeyB()
+		unsigned int getPublicKeyB()
 		{
 			return pubKeyB;
+		}
+
+		unsigned int getSsk()
+		{
+			return ssk;
 		}
 
 	private:
@@ -159,6 +176,7 @@ class DiffieHellman
 		unsigned int secKeyB = 0;
 		unsigned int pubKeyA = 1;
 		unsigned int pubKeyB = 1;
+		unsigned int ssk = 1;
 		const unsigned short primitiveRoot = 2;
 		unsigned int moduloChoose[3];
 		short chosenModulo = 1;	//choose which number: 1->19, 2->227, 3->797
@@ -196,6 +214,8 @@ int main()
 
 	cout << "\nPublic key A = " << dh.getPublicKeyA() << "\nPublic key B = " << dh.getPublicKeyB() << "\n";
 
+	dh.calcSharedSecretKey();
+	cout << "\nThe shared secret key = " << dh.getSsk() << "\n\n";
 
 #ifdef DEBUG
 
