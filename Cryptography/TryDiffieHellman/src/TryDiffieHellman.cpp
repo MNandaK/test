@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : TryDiffieHellman.cpp
 // Author      : Nandax
-// Version     : 0.7 - Improve modulo exponential to have bigger key value
+// Version     : 0.9 - Improve modulo exponential method to be more efficient
 // Copyright   : This is trial code, fell free to use with reference
 // Description : Try to implement basic simple shared key exchange DH algorithm
 //============================================================================
@@ -42,17 +42,51 @@ class Util
 
 		// This method calculate modulo of exponent integer,
 		// negative parameters will not working
-		unsigned long mod_exponent(unsigned short base, unsigned long exponent, unsigned short modulo)
+		unsigned short mod_exponent(unsigned short base, unsigned long exponent, unsigned short modulo)
 		{
-			unsigned long result = 1;
+			unsigned short result = 1;
 
-			if(exponent != 0)
+			if(exponent > 0)
 				result = base;
 
-			//This formula is get from
-			//https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
-			for(unsigned short exp = 2; exp <= exponent; exp++)
+			for(unsigned long exp = 2; exp <= exponent; exp++)
+			{
+				//This formula is get from
+				//https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
 				result = ((result % modulo) * (base % modulo)) % modulo;
+			}
+
+			return result;
+		}
+
+		// Improvement of method to calculate modulo of exponent integer,
+		// negative parameters will not working
+		unsigned short mod_exponent_v2(unsigned short base, unsigned long exponent, unsigned short modulo)
+		{
+			unsigned short result = 1;
+			unsigned long exp = exponent;
+
+			if(exponent >= 64)
+			{
+				result = pow_positive_int(base, 63) % modulo;
+				exp = exp - 63;
+			}
+			else if(exponent > 0)
+			{
+				result = base;
+				exp = exp - 1;
+			}
+
+			while(exp >= 64)
+			{
+				//This formula is get from
+				//https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
+				result = (result * (pow_positive_int(base, 63) % modulo)) % modulo;
+
+				exp = exp - 63;
+			}
+			result = (result * (pow_positive_int(base, exp) % modulo)) % modulo;
+
 
 			return result;
 		}
@@ -89,8 +123,8 @@ class DiffieHellman
 		{
 			Util util;
 
-			pubKeyA = util.mod_exponent(primitiveRoot, secKeyA, moduloChoose[chosenModulo-1]);
-			pubKeyB = util.mod_exponent(primitiveRoot, secKeyB, moduloChoose[chosenModulo-1]);
+			pubKeyA = util.mod_exponent_v2(primitiveRoot, secKeyA, moduloChoose[chosenModulo-1]);
+			pubKeyB = util.mod_exponent_v2(primitiveRoot, secKeyB, moduloChoose[chosenModulo-1]);
 		}
 
 		void setSecretKeyA(istream &in)
