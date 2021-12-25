@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : TryDiffieHellman.cpp
 // Author      : Nandax
-// Version     : 0.0
+// Version     : 0.5 - Minimal version only to get public key
 // Copyright   : This is trial code, fell free to use with reference
 // Description : Try to implement basic simple shared key exchange DH algorithm
 //============================================================================
@@ -20,6 +20,7 @@
 //using namespace std;
 using std::cout;
 using std::cin;
+using std::istream;
 
 class Util
 {
@@ -40,65 +41,123 @@ class Util
 		}
 };
 
+class DiffieHellman
+{
+	public:
+		DiffieHellman(){}
+
+		void setUpPrimitiveRootModulo()
+		{
+			//Below modulo numbers which primitive root is '2',
+			//was get from http://oeis.org/A001122/list
+			moduloChoose[0] = 19;
+			moduloChoose[1] = 227;
+			moduloChoose[2] = 797;
+
+			do {
+				cout << "Primitive root '2' for modulo:\n[1] '19'\n[2] '227'\n[3] '797'\n(please select one number 1-3): ";
+				cin >> chosenModulo;
+
+				if(chosenModulo < 1 || chosenModulo > 3)
+					cout << "Wrong choice, please input the correct value :)\n";
+
+				cout << "\n";
+
+			} while(chosenModulo < 1 || chosenModulo > 3);
+
+			cout << "The primitive root used is '2' for modulo '" << moduloChoose[chosenModulo-1] << "'\n";
+		}
+
+		void calcPublicKeys()
+		{
+			Util util;
+
+			pubKeyA = util.pow_positive_int(primitiveRoot, secKeyA) % moduloChoose[chosenModulo-1];
+			pubKeyB = util.pow_positive_int(primitiveRoot, secKeyB) % moduloChoose[chosenModulo-1];
+		}
+
+		void setSecretKeyA(istream &in)
+		{
+			in >> secKeyA;
+		}
+		void setSecretKeyB(istream &in)
+		{
+			in >> secKeyB;
+		}
+
+		unsigned short getSecretKeyA()
+		{
+			return secKeyA;
+		}
+		unsigned short getSecretKeyB()
+		{
+			return secKeyB;
+		}
+
+		unsigned short getPublicKeyA()
+		{
+			return pubKeyA;
+		}
+		unsigned short getPublicKeyB()
+		{
+			return pubKeyB;
+		}
+
+	private:
+		unsigned short secKeyA = 0;
+		unsigned short secKeyB = 0;
+		unsigned int pubKeyA, pubKeyB;
+		const unsigned short primitiveRoot = 2;
+		unsigned int moduloChoose[3];
+		short chosenModulo = 1;	//choose which number: 1->19, 2->227, 3->797
+//		const unsigned int moduloChoose[] = {19, 227, 797};	//modulo numbers which primitive root is '2',
+//															//get from http://oeis.org/A001122/list
+};
+
 int main()
 {
-	Util util;
+	DiffieHellman dh;
 
 //	unsigned int primitiveRootPair[] = {2, 19};
-	const unsigned short primitiveRoot = 2;
-	unsigned int moduloChoose[] = {19, 227, 797};	//Numbers from http://oeis.org/A001122/list
-	short chosenModulo = 1;
-	unsigned short secKeyA, secKeyB;
-	unsigned int pubKeyA, pubKeyB;
+
 
 	//cout << "Assalamu'alaikum" << endl; // prints Assalamu'alaikum
 	cout << "\n===========================================\n";
 	cout << "\n  Try Diffie-Hellman Shared Key Algorithm  \n";
 	cout << "\n===========================================\n\n";
 
-	//Input secret key B
+	//Input secret key A
 	do {
 		cout << "Please input A secret key (0-63 value): ";
-		cin >> secKeyA;
+		dh.setSecretKeyA(cin);
 
-		if(secKeyA < 0 || secKeyA > 63)
+		if(dh.getSecretKeyA() < 0 || dh.getSecretKeyA() > 63)
 			cout << "Key value is out of range, please input the correct value :)\n";
 
 		cout << "\n";
 
-	} while(secKeyA < 0 || secKeyA > 63);
+	} while(dh.getSecretKeyA() < 0 || dh.getSecretKeyA() > 63);
 
 	//Input secret key B
 	do {
 		cout << "Please input B secret key (0-63 value): ";
-		cin >> secKeyB;
+		dh.setSecretKeyB(cin);
 
-		if(secKeyB < 0 || secKeyB > 63)
+		if(dh.getSecretKeyB() < 0 || dh.getSecretKeyB() > 63)
 			cout << "Key value is out of range, please input the correct value :)\n";
 
 		cout << "\n";
 
-	} while(secKeyB < 0 || secKeyB > 63);
+	} while(dh.getSecretKeyB() < 0 || dh.getSecretKeyB() > 63);
 
 	//Choose modulo
-	do {
-		cout << "Primitive root '2' for modulo:\n[1] '19'\n[2] '227'\n[3] '797'\n(please select one number 1-3): ";
-		cin >> chosenModulo;
+	dh.setUpPrimitiveRootModulo();
 
-		if(chosenModulo < 1 || chosenModulo > 3)
-			cout << "Wrong choice, please input the correct value :)\n";
+	//Calculate public keys
+	dh.calcPublicKeys();
 
-		cout << "\n";
+	cout << "\nPublic key A = " << dh.getPublicKeyA() << "\nPublic key B = " << dh.getPublicKeyB() << "\n";
 
-	} while(chosenModulo < 1 || chosenModulo > 3);
-
-	cout << "The primitive root used is '2' for modulo '" << moduloChoose[chosenModulo-1] << "'\n";
-
-	//pubKeyA = pow(primitiveRootPair[0], secKeyA) % primitiveRootPair[1];
-	pubKeyA = util.pow_positive_int(primitiveRoot, secKeyA) % moduloChoose[chosenModulo-1];
-	pubKeyB = util.pow_positive_int(primitiveRoot, secKeyB) % moduloChoose[chosenModulo-1];
-
-	cout << "\nPublic key A = " << pubKeyA << "\nPublic key B = " << pubKeyB << "\n";
 
 #ifdef DEBUG
 
