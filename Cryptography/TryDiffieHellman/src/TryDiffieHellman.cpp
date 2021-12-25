@@ -180,16 +180,11 @@ class DiffieHellman
 		const unsigned short primitiveRoot = 2;
 		unsigned int moduloChoose[3];
 		short chosenModulo = 1;	//choose which number: 1->19, 2->227, 3->797
-//		const unsigned int moduloChoose[] = {19, 227, 797};	//modulo numbers which primitive root is '2',
-//															//get from http://oeis.org/A001122/list
 };
 
 int main()
 {
 	DiffieHellman dh;
-
-//	unsigned int primitiveRootPair[] = {2, 19};
-
 
 	//cout << "Assalamu'alaikum" << endl; // prints Assalamu'alaikum
 	cout << "\n===========================================\n";
@@ -218,7 +213,6 @@ int main()
 	cout << "\nThe shared secret key = " << dh.getSsk() << "\n\n";
 
 #ifdef DEBUG
-
 	cout << "\n\n======= Below values are to try and debug! ========\n\n";
 
 //	cout << "\nTry: 2^20 = " << util.pow_positive_int(2, 20);
