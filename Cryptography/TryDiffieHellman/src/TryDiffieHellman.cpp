@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : TryDiffieHellman.cpp
 // Author      : Nandax
-// Version     : 2.0 - Adding simple encryption feature successfully
+// Version     : 2.1 - Adding update step for encryption key
 // Date        : December 26, 2021
 // Copyright   : This is trial code, fell free to use with reference.
 //                I am also referring some resources. Please find list of some
@@ -220,6 +220,8 @@ class SymmetricEncryption
 			for (int i = 0; i < int(inputTxt.length()); i++)
 			{
 				outputTxt.push_back(inputTxt[i] ^ theKey);
+
+				theKey = util.rotate_8_bits(theKey);
 			}
 
 			return outputTxt;
