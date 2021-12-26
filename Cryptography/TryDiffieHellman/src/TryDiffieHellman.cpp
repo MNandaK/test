@@ -203,6 +203,7 @@ class DiffieHellman
 class SymmetricEncryption
 {
 	public:
+		// Simple encryption using XOR
 		string doSimpleEncryptOrDecrypt(unsigned int mySecKey, unsigned int otherPubKey)
 		{
 			Util util;
