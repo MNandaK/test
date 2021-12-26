@@ -4,25 +4,28 @@
 // Version     : 1.0 - Successfully implement Shared Secret Key (SSK) and
 //                      keep same type for some variables
 // Date        : December 26, 2021
-// Copyright   : This is trial code, fell free to use with reference
+// Copyright   : This is trial code, fell free to use with reference.
+//                I am also referring some resources. Please find list of some
+//                references that I used at the end of this file.
 // Description : Try to implement basic simple shared key exchange DH algorithm
 //============================================================================
 
-//#define DEBUG
-
 #include <iostream>
+#include <string>
+
+#define DEBUG
+#define INT_BITS 32
 
 #ifdef DEBUG
 #include <climits>
-//#include <string>
-//
-//using std::to_string;
+
 #endif
 //#include <cmath>
 //using namespace std;
 using std::cout;
 using std::cin;
 using std::istream;
+using std::string;
 
 class Util
 {
@@ -89,9 +92,43 @@ class Util
 			}
 			result = (result * (pow_positive_int(base, exp) % modulo)) % modulo;
 
-
 			return result;
 		}
+
+		// Rotate right by 8 bits
+		unsigned int rotate_8_bits(unsigned int num)
+		{
+			//Implementation on reference:
+			//https://www.geeksforgeeks.org/rotate-bits-of-an-integer/
+			return (num >> 8)|(num << (INT_BITS - 8));
+		}
+};
+
+class SymmetricEncryption
+{
+	public:
+		string doSimpleEncryptOrDecrypt(unsigned int mySecKey, unsigned int otherPubKey)
+		{
+			string outputTxt;
+
+			return outputTxt;
+		}
+
+		void messageFromSender(istream &in)
+		{
+			string inp;
+			in >> inp;
+
+			setInputTxt(inp);
+		}
+
+		void setInputTxt(string inputTxt)
+		{
+			this->inputTxt = inputTxt;
+		}
+
+	private:
+		string inputTxt;
 };
 
 class DiffieHellman
@@ -186,6 +223,9 @@ class DiffieHellman
 int main()
 {
 	DiffieHellman dh;
+	SymmetricEncryption sEnc;
+
+	string cipheredTxt;
 
 	//cout << "Assalamu'alaikum" << endl; // prints Assalamu'alaikum
 	cout << "\n===========================================\n";
@@ -242,6 +282,23 @@ int main()
 	unsigned short tryShort = -1;
 	cout << "\nInt tryShort = " << tryShort << "\n";
 
+	unsigned char ch1 = 'a';
+	unsigned char ch_key = 'Z';
+	unsigned char encrypt_by_xor = ch1 ^ ch_key;
+
+	cout << "\nEncrypted char = '" << encrypt_by_xor << "'\n";
+
+	cout << "\nDecrypted char = '" << char(encrypt_by_xor ^ ch_key) << "'\n";
+
+	//string str1 = "Te";//"Test123 relase 5";
+	char str1[] = "Te";
+	//string ch_key_str = "Za";
+	char ch_key_str[] = "Za";
+	//string str_encrypted = string(str1 ^ ch_key_str);
+	//char str_encrypted[] = str1 ^ ch_key;
+
+	//cout << "\nEncrypted string = '" << str_encrypted << "'\n";
+
 //	unsigned __int128 try128_1 = -1;
 //	//unsigned __int128 try128_2 = 340282366920938463463374607431768211456;
 //
@@ -253,3 +310,18 @@ int main()
 
 	return 0;
 }
+
+//============================================================================
+//
+// Main references:
+// 1. https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
+// 2. https://en.wikipedia.org/wiki/Primitive_root_modulo_n
+// 3. https://mathworld.wolfram.com/PrimitiveRoot.html
+// 4. http://oeis.org/A001122/list
+// 5. Stallings, William, "Cryptography and Network Security Principle and Practice 5th ed", Pearson Education, Inc., 2011.
+// 6. https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
+// 7. https://www.geeksforgeeks.org/rotate-bits-of-an-integer/
+// 8. https://stackoverflow.com/questions/64369972/using-getters-and-setters-with-user-input-in-c
+//
+// ============================== End of File ================================
+//============================================================================
