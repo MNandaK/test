@@ -19,12 +19,10 @@
 #include <climits>
 
 #endif
-//#include <cmath>
-//using namespace std;
+
 using std::cout;
 using std::cin;
 using std::istream;
-//using std::getline;
 using std::string;
 
 class Util
@@ -178,7 +176,6 @@ class DiffieHellman
 			return pubKeyB;
 		}
 
-
 		unsigned int getModulo()
 		{
 			return modulo;
@@ -190,7 +187,6 @@ class DiffieHellman
 		}
 
 	private:
-
 		unsigned int secKeyA = 0;
 		unsigned int secKeyB = 0;
 		unsigned int pubKeyA = 1;
@@ -228,10 +224,7 @@ class SymmetricEncryption
 		void messageFromSender(istream &in)
 		{
 			char inp[1024];
-			//in >> inp;
-			//std::getline(in, inp);
-			//in.clear();
-			//in.sync();
+
 			in.ignore();
 			in.getline(inp, 1024);
 
