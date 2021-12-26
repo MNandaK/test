@@ -1,8 +1,7 @@
 //============================================================================
 // Name        : TryDiffieHellman.cpp
 // Author      : Nandax
-// Version     : 1.0 - Successfully implement Shared Secret Key (SSK) and
-//                      keep same type for some variables
+// Version     : 2.0 - Adding simple encryption feature successfully
 // Date        : December 26, 2021
 // Copyright   : This is trial code, fell free to use with reference.
 //                I am also referring some resources. Please find list of some
@@ -13,7 +12,7 @@
 #include <iostream>
 #include <string>
 
-#define DEBUG
+//#define DEBUG
 #define INT_BITS 32
 
 #ifdef DEBUG
@@ -25,6 +24,7 @@
 using std::cout;
 using std::cin;
 using std::istream;
+//using std::getline;
 using std::string;
 
 class Util
@@ -104,33 +104,6 @@ class Util
 		}
 };
 
-class SymmetricEncryption
-{
-	public:
-		string doSimpleEncryptOrDecrypt(unsigned int mySecKey, unsigned int otherPubKey)
-		{
-			string outputTxt;
-
-			return outputTxt;
-		}
-
-		void messageFromSender(istream &in)
-		{
-			string inp;
-			in >> inp;
-
-			setInputTxt(inp);
-		}
-
-		void setInputTxt(string inputTxt)
-		{
-			this->inputTxt = inputTxt;
-		}
-
-	private:
-		string inputTxt;
-};
-
 class DiffieHellman
 {
 	public:
@@ -146,32 +119,33 @@ class DiffieHellman
 
 			do {
 				cout << "Primitive root '2' for modulo:\n[1] '19'\n[2] '227'\n[3] '797'\n(please select one number 1-3): ";
-				cin >> chosenModulo;
+				cin >> chosenModuloIdx;
 
-				if(chosenModulo < 1 || chosenModulo > 3)
+				if(chosenModuloIdx < 1 || chosenModuloIdx > 3)
 					cout << "Wrong choice, please input the correct value :)\n";
 
 				cout << "\n";
 
-			} while(chosenModulo < 1 || chosenModulo > 3);
+			} while(chosenModuloIdx < 1 || chosenModuloIdx > 3);
 
-			cout << "The primitive root used is '2' for modulo '" << moduloChoose[chosenModulo-1] << "'\n";
+			modulo = moduloChoose[chosenModuloIdx-1];
+			cout << "The primitive root used is '2' for modulo '" << modulo << "'\n";
 		}
 
 		void calcPublicKeys()
 		{
 			Util util;
 
-			pubKeyA = util.mod_exponent_v2(primitiveRoot, secKeyA, moduloChoose[chosenModulo-1]);
-			pubKeyB = util.mod_exponent_v2(primitiveRoot, secKeyB, moduloChoose[chosenModulo-1]);
+			pubKeyA = util.mod_exponent_v2(primitiveRoot, secKeyA, modulo);
+			pubKeyB = util.mod_exponent_v2(primitiveRoot, secKeyB, modulo);
 		}
 
 		void calcSharedSecretKey()
 		{
 			Util util;
 
-			unsigned int sskA = util.mod_exponent(pubKeyB, secKeyA, moduloChoose[chosenModulo-1]);
-			unsigned int sskB = util.mod_exponent(pubKeyA, secKeyB, moduloChoose[chosenModulo-1]);
+			unsigned int sskA = util.mod_exponent(pubKeyB, secKeyA, modulo);
+			unsigned int sskB = util.mod_exponent(pubKeyA, secKeyB, modulo);
 
 			if (sskA == sskB)
 				ssk = sskA;
@@ -204,12 +178,19 @@ class DiffieHellman
 			return pubKeyB;
 		}
 
+
+		unsigned int getModulo()
+		{
+			return modulo;
+		}
+
 		unsigned int getSsk()
 		{
 			return ssk;
 		}
 
 	private:
+
 		unsigned int secKeyA = 0;
 		unsigned int secKeyB = 0;
 		unsigned int pubKeyA = 1;
@@ -217,21 +198,70 @@ class DiffieHellman
 		unsigned int ssk = 1;
 		const unsigned short primitiveRoot = 2;
 		unsigned int moduloChoose[3];
-		short chosenModulo = 1;	//choose which number: 1->19, 2->227, 3->797
+		short chosenModuloIdx = 1;	//choose which number: 1->19, 2->227, 3->797
+		static unsigned int modulo;
 };
+
+class SymmetricEncryption
+{
+	public:
+		string doSimpleEncryptOrDecrypt(unsigned int mySecKey, unsigned int otherPubKey)
+		{
+			Util util;
+			DiffieHellman dh;
+
+			string outputTxt = "";
+
+			unsigned int theKey = util.mod_exponent(otherPubKey, mySecKey, dh.getModulo());
+#ifdef DEBUG
+			cout << "\nThe key used for encryption/decryption = " << theKey << "\n\n";
+#endif
+			for (int i = 0; i < int(inputTxt.length()); i++)
+			{
+				outputTxt.push_back(inputTxt[i] ^ theKey);
+			}
+
+			return outputTxt;
+		}
+
+		void messageFromSender(istream &in)
+		{
+			char inp[1024];
+			//in >> inp;
+			//std::getline(in, inp);
+			//in.clear();
+			//in.sync();
+			in.ignore();
+			in.getline(inp, 1024);
+
+			setInputTxt(inp);
+		}
+
+		void setInputTxt(string inputTxt)
+		{
+			this->inputTxt = inputTxt;
+		}
+
+	private:
+		string inputTxt;
+};
+
+//Static variable from DiffieHellman class
+unsigned int DiffieHellman::modulo;
 
 int main()
 {
 	DiffieHellman dh;
 	SymmetricEncryption sEnc;
 
-	string cipheredTxt;
+	string cipheredTxt, receivedTxt;
 
 	//cout << "Assalamu'alaikum" << endl; // prints Assalamu'alaikum
 	cout << "\n===========================================\n";
 	cout << "\n  Try Diffie-Hellman Shared Key Algorithm  \n";
 	cout << "\n===========================================\n\n";
 
+	/** Shared key generation **/
 	//Input secret key A
 	cout << "Please input A secret key: ";
 	dh.setSecretKeyA(cin);
@@ -252,6 +282,19 @@ int main()
 	//Calculate SSK
 	dh.calcSharedSecretKey();
 	cout << "\nThe shared secret key = " << dh.getSsk() << "\n\n";
+
+
+	/** Do simple encryption: Aisyah send message to Bukhori **/
+	//Send message to be encrypted
+	cout << "Message want to send by Aisyah: ";
+	sEnc.messageFromSender(cin);
+	cipheredTxt = sEnc.doSimpleEncryptOrDecrypt(dh.getSecretKeyA(), dh.getPublicKeyB());
+	cout << "\nThe ciphered message: \"" << cipheredTxt << "\"\n";
+
+	//Decipher the message
+	sEnc.setInputTxt(cipheredTxt);
+	receivedTxt = sEnc.doSimpleEncryptOrDecrypt(dh.getSecretKeyB(), dh.getPublicKeyA());
+	cout << "\nBukhori got message: \"" << receivedTxt << "\"\n\n";
 
 #ifdef DEBUG
 	cout << "\n\n======= Below values are to try and debug! ========\n\n";
@@ -322,6 +365,8 @@ int main()
 // 6. https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
 // 7. https://www.geeksforgeeks.org/rotate-bits-of-an-integer/
 // 8. https://stackoverflow.com/questions/64369972/using-getters-and-setters-with-user-input-in-c
+// 9. https://www.geeksforgeeks.org/iterate-over-characters-of-a-string-in-c/
+// 10.https://stackoverflow.com/questions/7786994/c-getline-isnt-waiting-for-input-from-console-when-called-multiple-times
 //
 // ============================== End of File ================================
 //============================================================================
