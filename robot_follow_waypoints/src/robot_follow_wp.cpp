@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 	/** test your code here **/
 	ROS_INFO("\n\n\n******START TESTING************\n");
 	ros::Rate loop_rate(0.5);
-	gridClean();
+	robotMission();
 	ros::spin();
 
 	return 0;
