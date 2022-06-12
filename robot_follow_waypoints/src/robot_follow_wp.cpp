@@ -87,28 +87,46 @@ void moveGoal(turtlesim::Pose  goal_pose, double distance_tolerance)
 
 	ros::Rate loop_rate(100);
 	double E = 0.0;
+	double err_ang_old = 0.0;
+	double integral_ang = 0.0;
+
 	do{
 		/****** Proportional Controller ******/
 		//linear velocity in the x-axis
 		double Kp=1.0;
 		double Ki=0.02;
+
 		//double v0 = 2.0;
-		//double alpha = 0.5;
+		
 		double e = getDistance(turtlesim_pose.x, turtlesim_pose.y, goal_pose.x, goal_pose.y);
 		double E = E+e;
 		//Kp = v0 * (exp(-alpha)*error*error)/(error*error);
 		vel_msg.linear.x = (Kp*e);
 		vel_msg.linear.y =0;
 		vel_msg.linear.z =0;
+
 		//angular velocity in the z-axis
+		double KpAng = 5; //10; //5; //1;
+		double KiAng = 2; //0.01; //1.5; //0.5; //0.1; //0.01;
+		double KdAng = 0.3;
+		double alpha = 0.5;
+
+		double err_ang = atan2(goal_pose.y-turtlesim_pose.y, goal_pose.x-turtlesim_pose.x)-turtlesim_pose.theta;
+		double new_integral = integral_ang + err_ang * loop_rate.cycleTime().toSec();
+
+		//cout << "\n\nNew integral = " << new_integral; 
+
 		vel_msg.angular.x = 0;
 		vel_msg.angular.y = 0;
-		vel_msg.angular.z =4*(atan2(goal_pose.y-turtlesim_pose.y, goal_pose.x-turtlesim_pose.x)-turtlesim_pose.theta);
+		vel_msg.angular.z = KpAng*err_ang + KiAng*new_integral;
 
 		velocity_publisher.publish(vel_msg);
 
 		ros::spinOnce();
 		loop_rate.sleep();
+
+		err_ang_old = err_ang;
+		integral_ang = new_integral;
 
 	}while(getDistance(turtlesim_pose.x, turtlesim_pose.y, goal_pose.x, goal_pose.y)>distance_tolerance);
 	//cout<<"end move goal"<<endl;
