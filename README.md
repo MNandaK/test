@@ -17,7 +17,7 @@ sudo docker run -it --net=host --name [a_ros_docker_N] \
     bash
 
 #Run roscore
-sudo docker container start os_docker_1-i
+sudo docker container start os_docker_1 -i
 
 #Run turtle sim
 sudo docker container start [a_ros_docker_2nd] -i
