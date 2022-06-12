@@ -13,8 +13,10 @@
 #include "geometry_msgs/Twist.h"
 #include "turtlesim/Pose.h"
 #include <sstream>
+#include <vector>
 
-using namespace std;
+using std::cout;
+using std::vector;
 
 ros::Publisher velocity_publisher;
 ros::Subscriber pose_subscriber;
@@ -31,6 +33,10 @@ const double PI = 3.14159265359;
 double degrees2radians(double angle_in_degrees);
 void poseCallback(const turtlesim::Pose::ConstPtr & pose_message);
 void moveGoal(turtlesim::Pose  goal_pose, double distance_tolerance);
+
+// Nandax [220612]: new function moveToWaypoints() to make the robot move to several points in sequence
+void moveToWaypoints(vector<turtlesim::Pose> waypoint_poses, double distance_tolerance);
+
 void robotMission();
 
 int main(int argc, char **argv)
@@ -56,22 +62,26 @@ int main(int argc, char **argv)
 }
 
 
-double degrees2radians(double angle_in_degrees){
+double degrees2radians(double angle_in_degrees)
+{
 	return angle_in_degrees *PI /180.0;
 }
 
 
-void poseCallback(const turtlesim::Pose::ConstPtr & pose_message){
+void poseCallback(const turtlesim::Pose::ConstPtr & pose_message)
+{
 	turtlesim_pose.x=pose_message->x;
 	turtlesim_pose.y=pose_message->y;
 	turtlesim_pose.theta=pose_message->theta;
 }
 
-double getDistance(double x1, double y1, double x2, double y2){
+double getDistance(double x1, double y1, double x2, double y2)
+{
 	return sqrt(pow((x1-x2),2)+pow((y1-y2),2));
 }
 
-void moveGoal(turtlesim::Pose  goal_pose, double distance_tolerance){
+void moveGoal(turtlesim::Pose  goal_pose, double distance_tolerance)
+{
 
 	geometry_msgs::Twist vel_msg;
 
@@ -101,22 +111,64 @@ void moveGoal(turtlesim::Pose  goal_pose, double distance_tolerance){
 		loop_rate.sleep();
 
 	}while(getDistance(turtlesim_pose.x, turtlesim_pose.y, goal_pose.x, goal_pose.y)>distance_tolerance);
-	cout<<"end move goal"<<endl;
+	//cout<<"end move goal"<<endl;
 	vel_msg.linear.x =0;
 	vel_msg.angular.z = 0;
 	velocity_publisher.publish(vel_msg);
 }
 
+void moveToWaypoints(vector<turtlesim::Pose> waypoint_poses, double distance_tolerance)
+{
+	for (unsigned int point = 0; point < waypoint_poses.size(); point++)
+	{
+		ROS_INFO_STREAM("Move to point " << point+1 << ", target coordinate (" <<
+			waypoint_poses[point].x << ", " << waypoint_poses[point].y << ")" );
 
+		moveGoal(waypoint_poses[point], distance_tolerance);
+	}
+	cout << "\n";
+	ROS_INFO_STREAM("The robot has gone through all waypoints,\nMISSION ACCOMPLISHED!" );
+}
 
 void robotMission(){
 
 	ros::Rate loop(0.5);
-	turtlesim::Pose pose;
-	pose.x=1;
-	pose.y=1;
-	pose.theta=0;
-	moveGoal(pose, 0.01);
+	// turtlesim::Pose pose;
+	// pose.x=1;
+	// pose.y=1;
+	// pose.theta=0;
+	// moveGoal(pose, 0.01);
+
+	vector<turtlesim::Pose> waypoint_poses;
+
+	turtlesim::Pose pose1;
+	pose1.x = 1.5;
+	pose1.y = 1.5;
+	waypoint_poses.push_back(pose1);
+
+	turtlesim::Pose pose2;
+	pose2.x = 7;
+	pose2.y = 7;
+	waypoint_poses.push_back(pose2);
+
+	turtlesim::Pose pose3;
+	pose3.x = 3.2;
+	pose3.y = 3.2;
+	waypoint_poses.push_back(pose3);
+
+	turtlesim::Pose pose4;
+	pose4.x = 10;
+	pose4.y = 4;
+	waypoint_poses.push_back(pose4);
+	
+	turtlesim::Pose pose5;
+	pose5.x = 1;
+	pose5.y = 9;
+	waypoint_poses.push_back(pose5);
+
+	moveToWaypoints(waypoint_poses, 0.01);
+
+
 	loop.sleep();
 	
 	double distance = getDistance(turtlesim_pose.x, turtlesim_pose.y, x_max, y_max);
